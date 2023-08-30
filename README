@@ -1,1 +1,22 @@
+Bash-Like UNIX Shell
+The Bash-Like UNIX Shell is an interactive shell that operates in a manner similar to the widely used Bash shell. This project encompasses various functionalities that mimic the behavior of a typical UNIX command-line environment. The shell combines user-friendly interaction with a range of powerful features, providing an enhanced command-line experience.
 
+Key Features
+Command Parsing and Execution: The shell implements a robust parsing mechanism utilizing Lex and Yacc, enabling seamless interpretation and execution of both individual Bash commands and complete scripts. This execution occurs within separate processes, ensuring efficient management of system resources.
+
+Complete Bash Compatibility: The shell achieves comprehensive support for Bash syntax, including intricate aspects such as character escaping, quoting, file redirection, piping, and handling environment variables. Additionally, it accommodates advanced features like regular expressions and subshell execution, delivering a familiar and versatile environment for users.
+
+Bash Script Support: The shell extends its capabilities beyond interactive commands, facilitating the execution of Bash scripts. This ability to handle scripts empowers users to automate sequences of commands and operations, enhancing productivity.
+
+Hardware Status Monitoring: Enriching the user experience, the shell provides the functionality to monitor hardware status. Users can access essential hardware-related information directly from the command line, enabling efficient system resource management and troubleshooting.
+
+Keyboard Signal Handling: The shell exhibits responsiveness by reacting to keyboard signals. This responsiveness ensures a smooth user experience, allowing for interruption of ongoing processes and other interactions through keyboard inputs.
+
+Usage
+Command Execution: To execute individual commands, simply input the desired Bash command, and the shell will interpret and execute it accordingly.
+
+Script Execution: For executing Bash scripts, provide the path to the script file as a command. The shell will process and execute the script's contents, facilitating the automation of complex tasks.
+
+Hardware Status: Utilize specialized commands to access hardware-related information. The shell will promptly provide relevant status details, assisting users in monitoring and managing system resources.
+
+Keyboard Interaction: Engage with the shell through keyboard inputs, utilizing standard keyboard signals to pause, resume, or terminate ongoing processes.
