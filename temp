@@ -1,0 +1,60 @@
+/*
+      // 此段文件wildcard
+      auto wildcard = arg;
+
+      // 转换 wildcard 到 regular expression
+      std::string regular_expression = "^";
+      for(std::string::size_type i = 0; i < wildcard.size(); ++i) {
+        if (wildcard[i] == '*') {
+          regular_expression += ".*";
+        } else if (wildcard[i] == '?') {
+          regular_expression += ".";
+        } else if (wildcard[i] == '.') {
+          regular_expression += "\\.";
+        } else {
+          regular_expression += wildcard[i];
+        }
+      }
+      regular_expression += "$";
+
+      // 是否包含隐藏文件
+      bool include_hidden = false;
+      if (wildcard.at(0) == '.') {
+        include_hidden = true;
+      }
+
+      // 编译RE为有限自动机FSA
+      // compiles RE to executable version
+      regex_t preg;
+      int err = regcomp( &preg, regular_expression.c_str(), REG_EXTENDED|REG_NOSUB);
+      // 报错
+      if (err) {
+        perror("FSAcompile");
+        //return;
+      }
+
+      // 打开dir (当前)
+      DIR * dir = opendir(".");
+      //报错
+      if (dir == NULL) {
+        perror("open dir");
+        //return;
+      }
+
+      struct dirent * ent;
+      while ((ent = readdir(dir)) != NULL) {
+        auto file_name = ent->d_name;
+        // 跳过隐藏文件
+        if (!include_hidden && file_name[0] == '.') {
+          continue;
+        }
+
+        // 对比文件名与RE
+        if (regexec(&preg, file_name, 0, NULL, 0) == 0) {
+          //auto new_file = new std::string(file_name);
+          //Command::_currentSimpleCommand->insertArgument( new_file );
+          // 符合RE, 添加文件名入array
+          array.push_back (std::string(file_name));
+        }
+      }
+      */
